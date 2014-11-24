@@ -32,6 +32,5 @@ Kompatibilität zu Ubuntu aufweist. Folgende Pakete werden zum compilieren benö
 - libboost-thread-dev
 
 --
-Erwin Nindl, <erwin@nindl.eu>
 am 03.07.2014
 
