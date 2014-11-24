@@ -16,10 +16,13 @@ der Parallelisierung mit Prozessen und Unix-Pipes illustrieren.
 Build-System
 ------------
 - Compilieren
-  $ make clean && make
+```
+$ make clean && make
+```
 - Einfacher Testlauf
-  $ make test
-
+```
+$ make test
+```
 
 Abhängigkeiten / Debian(testing) Packete
 ----------------------------------------
