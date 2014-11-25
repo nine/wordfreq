@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # wordfreq-multiproc.sh
-# Anton Paar Shapetec homeassignment
+# Programmierbeispiel C++ 
 # Erwin Nindl, 01.07.2014
 # Email: <erwin@nindl.eu>
 

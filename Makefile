@@ -1,7 +1,7 @@
 # wordfreq 
 
 # wordfreq.sh
-# für Anton Paar Shapetec
+# Programmierbeispiel C++ 
 # Erwin Nindl, 01.07.2014
 # Email: <erwin@nindl.eu>
 
