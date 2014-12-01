@@ -9,9 +9,9 @@
 CC=g++
 RM=rm -f
 CFLAGS=-Wall -std=c++11 
-LDFLAGS=
+LDFLAGS=-pthread
 INCLUDE=
-LIBS=-lboost_system -lboost_program_options -lboost_thread
+LIBS=-lboost_system -lboost_program_options
 
 #--------------------------------------------------------
 

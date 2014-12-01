@@ -8,8 +8,8 @@
 #include <string>
 #include <fstream>
 #include <mutex>
+#include <thread>
 
-#include <boost/thread.hpp> 
 #include "boost/program_options.hpp" 
 
 #include "main.h"
@@ -40,12 +40,15 @@ int main(int argc, char** argv)
     StringFreqMap histogram;
    
     // one reader-thread per input-file
-    boost::thread_group reader_threads;
+    std::vector<std::thread> reader_threads;
     for( auto it = in_files.begin() ; it != in_files.end(); ++it ) {
       FileReader reader(*it, &histogram);
-      reader_threads.create_thread(reader);
+      reader_threads.push_back(std::thread(reader));
     }
-    reader_threads.join_all();
+    // join the threads with the main thread
+    for( auto &t: reader_threads ) {
+      t.join();
+    }
     // handle the (first) transferred exceptions if any
     for( const std::exception_ptr& ep : g_exceptions_transferred ) {
       if( ep!=nullptr ) { 
