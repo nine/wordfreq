@@ -7,7 +7,8 @@
 #include <string>
 #include <fstream>
 #include <string>
-#include <boost/thread.hpp> 
+#include <map>
+#include <mutex>
 
 #include "myException.h"
 #include "main.h"
@@ -19,7 +20,7 @@ public:
   void operator()();
 
 private:
-  static boost::mutex mx_;    // shared mutex
+  static std::mutex mx_;    // shared mutex
   std::string file_;
   StringFreqMap* histogram_; 
 };
